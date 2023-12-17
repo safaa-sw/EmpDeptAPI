@@ -1,0 +1,400 @@
+{
+	"info": {
+		"_postman_id": "9bab735b-c029-4a62-811b-435872a52278",
+		"name": "empDeptApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16570847"
+	},
+	"item": [
+		{
+			"name": "employee",
+			"item": [
+				{
+					"name": "get all employees",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODA2MmJhN2Y2NmM1NDdkNTRkZjdlODY0MzgwYTYxNTdjMDk3ZDY2NjY2OWQxYTUwOGNhY2RhODAxYTRiZDI2Yjc5MzE2ZmM5NmQyOTE2NWMiLCJpYXQiOjE2Njg0OTgxMjUsIm5iZiI6MTY2ODQ5ODEyNSwiZXhwIjoxNzAwMDM0MTI1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rqpvbS1MRsEzPRy2M2eixGdq4xd9_t6uQ0TJapk6TAnL1-NUqE2jvnB7PuVV7qLHTjhIuD6LI3DS7Hd5CahAvnDr30pEdf9CX44aLHdat62t7kIx8X36GIkvGC4TCfKRleBwa4YXpyQReajKMnpwMWkEQGMUnVejcZkZQuK9BacbrkQ6UtBScI1mT3-KSie6Qy0B4uLpIw-SDcw8AjSsDCFyJeA6DDKbgRrZLRN_3cTTuZlLaGLJ-0WXBcklhmHENZK1vdRzFMlSp1znGx5jRPOPe2stokwbngDsextUtyxlirutyeaImRk6AOVUWB6J0giKdzcSjit3qqKsACd-y-KThaZm0Ob2KEp8kUXqpponXRgKqHmgl5J6qaHGnhkJSjxNIXe1phglqphr1HM3UQPQZVb27IW1K09dYWs1SWDfYPum_SgA2G1hJjcBgwPKbxFtY7xLwF6t0PYRX8rrkyr9aJgswP-phn8g4rF-5RdxZy6Cd6w5wbqLLOFz0k4JBhVMpbaJ2vq02m0WJEyvMf2vkFjYbtpKXAaFO1-ZVkS1TWuS7caBI-63d8rJA02wGydWjJSVGkOclbkGmgUkvZ8pY70YkQa4YDuNIaf4qpdikYMIw0mEsjNEsjyxMP4dCU20oHFVBsdlaGw8MC7Uwdh94qhfoVaZCw2ebsnb7Mc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"salim\",\r\n    \"age\":\"45\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/employees",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show an employee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"hamid\",\r\n    \"age\":\"55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/employees/5",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/7",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "department",
+			"item": [
+				{
+					"name": "get all departments",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODA2MmJhN2Y2NmM1NDdkNTRkZjdlODY0MzgwYTYxNTdjMDk3ZDY2NjY2OWQxYTUwOGNhY2RhODAxYTRiZDI2Yjc5MzE2ZmM5NmQyOTE2NWMiLCJpYXQiOjE2Njg0OTgxMjUsIm5iZiI6MTY2ODQ5ODEyNSwiZXhwIjoxNzAwMDM0MTI1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rqpvbS1MRsEzPRy2M2eixGdq4xd9_t6uQ0TJapk6TAnL1-NUqE2jvnB7PuVV7qLHTjhIuD6LI3DS7Hd5CahAvnDr30pEdf9CX44aLHdat62t7kIx8X36GIkvGC4TCfKRleBwa4YXpyQReajKMnpwMWkEQGMUnVejcZkZQuK9BacbrkQ6UtBScI1mT3-KSie6Qy0B4uLpIw-SDcw8AjSsDCFyJeA6DDKbgRrZLRN_3cTTuZlLaGLJ-0WXBcklhmHENZK1vdRzFMlSp1znGx5jRPOPe2stokwbngDsextUtyxlirutyeaImRk6AOVUWB6J0giKdzcSjit3qqKsACd-y-KThaZm0Ob2KEp8kUXqpponXRgKqHmgl5J6qaHGnhkJSjxNIXe1phglqphr1HM3UQPQZVb27IW1K09dYWs1SWDfYPum_SgA2G1hJjcBgwPKbxFtY7xLwF6t0PYRX8rrkyr9aJgswP-phn8g4rF-5RdxZy6Cd6w5wbqLLOFz0k4JBhVMpbaJ2vq02m0WJEyvMf2vkFjYbtpKXAaFO1-ZVkS1TWuS7caBI-63d8rJA02wGydWjJSVGkOclbkGmgUkvZ8pY70YkQa4YDuNIaf4qpdikYMIw0mEsjNEsjyxMP4dCU20oHFVBsdlaGw8MC7Uwdh94qhfoVaZCw2ebsnb7Mc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/departments",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add new department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"finance\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/departments",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get a specific department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/3",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"planning\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/departments/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/departments/2",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departments",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get employees of specific department",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODA2MmJhN2Y2NmM1NDdkNTRkZjdlODY0MzgwYTYxNTdjMDk3ZDY2NjY2OWQxYTUwOGNhY2RhODAxYTRiZDI2Yjc5MzE2ZmM5NmQyOTE2NWMiLCJpYXQiOjE2Njg0OTgxMjUsIm5iZiI6MTY2ODQ5ODEyNSwiZXhwIjoxNzAwMDM0MTI1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rqpvbS1MRsEzPRy2M2eixGdq4xd9_t6uQ0TJapk6TAnL1-NUqE2jvnB7PuVV7qLHTjhIuD6LI3DS7Hd5CahAvnDr30pEdf9CX44aLHdat62t7kIx8X36GIkvGC4TCfKRleBwa4YXpyQReajKMnpwMWkEQGMUnVejcZkZQuK9BacbrkQ6UtBScI1mT3-KSie6Qy0B4uLpIw-SDcw8AjSsDCFyJeA6DDKbgRrZLRN_3cTTuZlLaGLJ-0WXBcklhmHENZK1vdRzFMlSp1znGx5jRPOPe2stokwbngDsextUtyxlirutyeaImRk6AOVUWB6J0giKdzcSjit3qqKsACd-y-KThaZm0Ob2KEp8kUXqpponXRgKqHmgl5J6qaHGnhkJSjxNIXe1phglqphr1HM3UQPQZVb27IW1K09dYWs1SWDfYPum_SgA2G1hJjcBgwPKbxFtY7xLwF6t0PYRX8rrkyr9aJgswP-phn8g4rF-5RdxZy6Cd6w5wbqLLOFz0k4JBhVMpbaJ2vq02m0WJEyvMf2vkFjYbtpKXAaFO1-ZVkS1TWuS7caBI-63d8rJA02wGydWjJSVGkOclbkGmgUkvZ8pY70YkQa4YDuNIaf4qpdikYMIw0mEsjNEsjyxMP4dCU20oHFVBsdlaGw8MC7Uwdh94qhfoVaZCw2ebsnb7Mc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/departEmployee/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"departEmployee",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get the department for an employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODA2MmJhN2Y2NmM1NDdkNTRkZjdlODY0MzgwYTYxNTdjMDk3ZDY2NjY2OWQxYTUwOGNhY2RhODAxYTRiZDI2Yjc5MzE2ZmM5NmQyOTE2NWMiLCJpYXQiOjE2Njg0OTgxMjUsIm5iZiI6MTY2ODQ5ODEyNSwiZXhwIjoxNzAwMDM0MTI1LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.rqpvbS1MRsEzPRy2M2eixGdq4xd9_t6uQ0TJapk6TAnL1-NUqE2jvnB7PuVV7qLHTjhIuD6LI3DS7Hd5CahAvnDr30pEdf9CX44aLHdat62t7kIx8X36GIkvGC4TCfKRleBwa4YXpyQReajKMnpwMWkEQGMUnVejcZkZQuK9BacbrkQ6UtBScI1mT3-KSie6Qy0B4uLpIw-SDcw8AjSsDCFyJeA6DDKbgRrZLRN_3cTTuZlLaGLJ-0WXBcklhmHENZK1vdRzFMlSp1znGx5jRPOPe2stokwbngDsextUtyxlirutyeaImRk6AOVUWB6J0giKdzcSjit3qqKsACd-y-KThaZm0Ob2KEp8kUXqpponXRgKqHmgl5J6qaHGnhkJSjxNIXe1phglqphr1HM3UQPQZVb27IW1K09dYWs1SWDfYPum_SgA2G1hJjcBgwPKbxFtY7xLwF6t0PYRX8rrkyr9aJgswP-phn8g4rF-5RdxZy6Cd6w5wbqLLOFz0k4JBhVMpbaJ2vq02m0WJEyvMf2vkFjYbtpKXAaFO1-ZVkS1TWuS7caBI-63d8rJA02wGydWjJSVGkOclbkGmgUkvZ8pY70YkQa4YDuNIaf4qpdikYMIw0mEsjNEsjyxMP4dCU20oHFVBsdlaGw8MC7Uwdh94qhfoVaZCw2ebsnb7Mc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/empDepartment/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"empDepartment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"safaa\",\r\n    \"email\":\"safaa@test.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/register",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMDIzOTk1ZGZhYWZkNmRkYjJiMDYxZjc0ZDk0OTZkMmM0ODBjZTllNzkyODg5OTRkNDg5ZmRlYTg2ZGYyMTIzYWJkODA0MzVkZGMxZGUwYWMiLCJpYXQiOjE2Njg0OTgwODAsIm5iZiI6MTY2ODQ5ODA4MCwiZXhwIjoxNzAwMDM0MDgwLCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.eJ-5Ro7wiaCkca74x53R3mCYCq-V_2zMdSOZfSJ-0W3D5TwbuJpriiEqafl1lJQqoc-8FEx1MY3-1KKnvjQYxzzjwyBkvU3Zal_s0Tibh_5YrBF-R4ODzz71AxF-oChVCh_woPbJ8xHoErgu8x_Gwe0df2h6U5CbE-8c8HInuPiDIDG1D1BAs1CVhp2oXSiNV9kSGfCjxueS7YmP0s1RA_JaN1ZOXHICgrWlBD-g64YwISytxp3CccB7tChEKHUABrW6OQgJiAXXIHZLwmJ0GYvjE3NZpT_j7lDY1wle7oXKwsPa__i-QVM5uE2oNKeBb9XGKs9xxnOenjNZPoVMJGxcfsoPfOqf4VkeGVGrFti5wTeECRg9FPyrKejiPfYl6xQlDVGWJMyOwMDsGzf9PI2CB3k7nig8H2WEjsl3qwIhVAThOJW57Mlt6SxAhu8yWLP4QwOFTMb61FXcXj7K0GZlznyrGros2VrdCogXgz_5hAmhca1t6EwOwIHwY5LILv87NAJdpr2bTAZlK9J9diDkxqx-SlogYcffjrHPWP0cBKYxJF9ZzVRVX1ZXcIzxhE-ESXWzAtfiZEvz8ThqpmfEfGYEWBh9sfogSijnTNt0InZW5YE_uUzVpkxy5IJz1rib4colIyNdfEtk5eRnqSj_LERaStLP_nV8hMVNSzE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"safaa@test.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/login",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8000/api",
+			"type": "string"
+		}
+	]
+}
